@@ -1,15 +1,49 @@
-Welcome to your new dbt project!
+# dbt_scooters
 
-### Using the starter project
+Проект dbt_scooters используется для анализа и моделирования данных, связанных с использованием электросамокатов. Этот проект помогает преобразовывать сырые данные о поездках и пользователях в чистые и структурированные модели, готовые для анализа и отчетности.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Основные команды dbt
 
+Вот краткое руководство по базовым командам dbt, которые помогут вам работать с проектом:
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+1. **Инициализация нового dbt-проекта:**
+   ```bash
+   dbt init <project_name>
+   ```
+
+2. **Запуск всех моделей:**
+   ```bash
+   dbt run
+   ```
+
+3. **Запуск тестов:**
+   ```bash
+   dbt test
+   ```
+
+4. **Генерация документации:**
+   ```bash
+   dbt docs generate
+   ```
+
+5. **Запуск веб-сервера для просмотра документации:**
+   ```bash
+   dbt docs serve
+   ```
+
+6. **Просмотр графа зависимостей:**
+   ```bash
+   dbt deps
+   ```
+
+7. **Запуск одной конкретной модели:**
+   ```bash
+   dbt run --models <model_name>
+   ```
+
+8. **Запуск тестов для конкретной модели:**
+   ```bash
+   dbt test --models <model_name>
+   ```
+
+Эти команды помогут вам эффективно управлять проектом dbt_scooters. Для более глубокой информации обращайтесь к [официальной документации](https://docs.getdbt.com/).
