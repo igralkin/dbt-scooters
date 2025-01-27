@@ -69,3 +69,6 @@ models:
     description: "Number of simultaneous rides in time"
     config:
       materialized: "incremental"
+
+  - name: "companies_trips"
+    description: "Trip satistics by company"
