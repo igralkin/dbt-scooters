@@ -11,5 +11,6 @@ clean-targets:
   - "target"
   - "dbt_packages"
 models:
-  dbt_scooters:
+  dbt_scooters:    
     +materialized: "table"
+    +on_schema_change: "append_new_columns"
