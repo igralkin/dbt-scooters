@@ -7,3 +7,5 @@ seeds:
       delimiter: ","
   - name: "event_types"
     description: "Meaningful types of mobile app events"
+  - name: "age_groups"
+    description: "Age groups to split users for analysis"
