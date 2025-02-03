@@ -23,3 +23,22 @@ macros:
       - name: "grid"
         type: "integer"
         description: "Size of grid hexagon"
+        
+  - name: "create_role"
+    description: "Create role for users as dbt operation"
+    arguments:
+      - name: "name"
+        type: "string"
+        description: "Role name"
+        
+  - name: "generate_schema_name"
+    description: |
+      Simplify custom schema name generation using only provided name.
+      dbt uses this macro automatically, there is no need to run it manually.
+    arguments:
+      - name: "custom_schema_name"
+        type: "string"
+        description: "Custom name of schema defined in project configuration"
+      - name: "node"
+        type: "node"
+        description: "dbt node to generate schema name for (not in use)"
