@@ -52,4 +52,13 @@
    dbt test --models <model_name>
    ```
 
+9. **Проверка актуальности данных в источниках:**
+   ```bash
+   dbt source freshness
+   ```
+   
 Эти команды помогут вам эффективно управлять проектом dbt_scooters. Для более глубокой информации обращайтесь к [официальной документации](https://docs.getdbt.com/).
+
+## Полезные макросы
+
+- `dbt run-operation create_role --args "name: finance"` - создание роли в базе (на примере роли "finance")
