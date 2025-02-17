@@ -7,6 +7,7 @@ unnest_cte as (
     from
         {{ source('scooters_raw', 'trips') }}
 ),
+
 sum_cte as (
     -- Make timestamp unique, group increments
     select
@@ -17,14 +18,18 @@ sum_cte as (
     group by
         1
 ),
+
 cumsum_cte as (
     -- Integrate increment to get concurrency
     select
         "timestamp",
-        sum(increment) over (order by "timestamp") as concurrency
+        sum(increment) over (
+            order by "timestamp"
+        ) as concurrency
     from
         sum_cte
 )
+
 select
     "timestamp",
     concurrency,
