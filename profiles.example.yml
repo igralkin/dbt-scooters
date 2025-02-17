@@ -5,6 +5,15 @@ dbt_scooters:
       host: 5.45.127.218
       pass: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
       port: 5432
+      schema: dbt_dev
+      threads: 4
+      type: postgres
+      user: admin
+    prod:
+      dbname: scooters
+      host: 5.45.127.218
+      pass: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
+      port: 5432
       schema: dbt
       threads: 4
       type: postgres
